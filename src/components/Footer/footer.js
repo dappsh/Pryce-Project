@@ -20,7 +20,7 @@ class footer extends Component {
                                     <div className="footer_social_area text-center">
                                         <i className="fa fa-pinterest" aria-hidden="true"></i>
                                         <i className="fa fa-facebook" aria-hidden="true"></i>
-                                        <i className="fa fa-twitter" aria-hidden="true"></i>
+                                        <i cla ssName="fa fa-twitter" aria-hidden="true"></i>
                                         <i className="fa fa-linkedin" aria-hidden="true"></i>
                                     </div>
                                 </div>

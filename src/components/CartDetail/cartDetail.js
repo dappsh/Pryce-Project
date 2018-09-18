@@ -116,7 +116,6 @@ class cart extends Component {
         return (
             <div>
 
-
                 {/* <!-- ****** Cart Area Start ****** --> */}
                 <div className="cart_area section_padding_100 clearfix">
                     <div className="container">
@@ -148,7 +147,7 @@ class cart extends Component {
                                         <Link to='/product'>Continue shooping</Link>
                                     </div>
                                     <div className="w-25 text-right">
-                                    <Link to="/checkout"><a  style={{color: 'white'}} className="btn karl-checkout-btn">Proceed to checkout</a></Link> 
+                                    <Link to="/checkout"><span style={{color: 'white'}} className="btn karl-checkout-btn">Proceed to checkout</span></Link> 
                                     </div>
                                 </div>
 

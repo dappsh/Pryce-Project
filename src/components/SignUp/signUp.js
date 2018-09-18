@@ -49,7 +49,7 @@ class register extends Component {
         // dengan response schema berikut {data: berisi objek yang dikirim res send
         //  status: http code, statusText : ok, headers: {}, config: {}, request: {}
         // kalau catct ini method dari promise juga dia untuk handle error
-        axios.post(url, newUser)
+        axios.post(`${apiHost}/SignUp`, newUser)
             .then((res) => {console.log('SIGN UP = RES DATA POST ',res.data)
             })
             .catch((err)=>{console.log(err)})

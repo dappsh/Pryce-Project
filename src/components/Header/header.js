@@ -53,10 +53,13 @@ class header extends Component {
         const { user } = this.state;
         console.log('STATE USER : ', user)
         console.log(this.props.user)
+
+
         return (
             // <div style={{ backgroundImage: 'url(img/product/14885.jpg' }}>
             <div>
 
+                    {/* {console.log(this.props)} */}
                 {/* <!-- ****** Header Area Start ****** --> */}
                 <header className="header_area" >
                     {/* <!-- Top Header Area Start --> */}
@@ -107,7 +110,7 @@ class header extends Component {
                                         </nav>
                                     </div>
 
-                                    {user ?
+                                    {user  ?
 
                                         <div>
                                             <Link to='/cart'><button style={{ marginRight: 10 }} type="button" className="btn btn-outline-info"><i className="fa fa-shopping-cart" aria-hidden="true"></i> Cart</button></Link>

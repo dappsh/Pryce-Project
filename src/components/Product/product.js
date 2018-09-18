@@ -9,6 +9,9 @@ import Header from '../Header/header';
 import Cookies from 'js-cookie';
 
 
+
+
+
 class product extends Component {
 
     constructor(props) {
@@ -37,7 +40,7 @@ class product extends Component {
     // show all product
     showAllProduct = () => {
         var url = `${apiHost}/product`;
-        
+
         var a = axios.get(url);
         a.then((x) => {
             console.log('PRODUCT === DATA YANG DIKIRIMR RES SEND SHOW ALL PRODUCT', x.data)
@@ -136,8 +139,8 @@ class product extends Component {
         return (
 
 
-            <div style={{backgroundImage: 'url(img/product/14710.jpg'}}>
-                        <Header/>
+            <div style={{ backgroundImage: 'url(img/product/14710.jpg' }}>
+                <Header />
 
                 {/* <!-- MATERI JUMBOTRON --> */}
                 <div className="jumbotron" style={{ height: '57px', textAlign: 'center', backgroundColor: "#f5d568", padding: "7px" }}>
@@ -158,7 +161,7 @@ class product extends Component {
 
                 <div className="karl-projects-menu">
                     <div className="text-center portfolio-menu">
-                        <h1 style={{color:'#000000'}} >OUR PRODUCTS</h1>
+                        <h1 style={{ color: '#000000' }} >OUR PRODUCTS</h1>
                     </div>
                 </div>
 
@@ -166,7 +169,7 @@ class product extends Component {
                 {/* <!-- ****** Quick View Modal Area Start ****** --> */}
 
                 {console.log('ini isi dataModal', dataModal)}
-                
+
                 <div className="modal fade" id="quickview" tabIndex="-1" role="dialog" aria-labelledby="quickview" aria-hidden="true">
                     <div className="modal-dialog modal-lg modal-dialog-centered" role="document">
                         <div className="modal-content">
@@ -261,13 +264,13 @@ class product extends Component {
                                         {this.state.product.map((data, key) => {
                                             // Cetak hasil
                                             var bilangan = data.price;
-		
-                                            var	reverse = bilangan.toString().split('').reverse().join(''),
-                                                ribuan 	= reverse.match(/\d{1,3}/g);
-                                                ribuan	= ribuan.join('.').split('').reverse().join('');
-                                            
+
+                                            var reverse = bilangan.toString().split('').reverse().join(''),
+                                                ribuan = reverse.match(/\d{1,3}/g);
+                                            ribuan = ribuan.join('.').split('').reverse().join('');
+
                                             console.log('ke rupiah ', reverse)
-                                            console.log('data product map : ', data);  
+                                            console.log('data product map : ', data);
                                             console.log('data product price : ', ribuan);
 
                                             return (
@@ -284,7 +287,7 @@ class product extends Component {
                                                         <h4 className="product-price" style={{ color: "#000000" }}>Rp {
                                                             ribuan}</h4>
                                                         <p style={{ color: "#000000" }}>{data.productname}</p>
-                                                    
+
                                                     </div>
                                                 </div>
                                             )
@@ -324,7 +327,7 @@ const mapStateToProps = (state) => {
     // const productDetail = state.productDetail;
     const user = state.user
     const greet = state.greetRed
-    return {  user, greet }
+    return { user, greet }
 };
 
-export default withRouter(connect(mapStateToProps, {  })(product));
+export default withRouter(connect(mapStateToProps)(product));
